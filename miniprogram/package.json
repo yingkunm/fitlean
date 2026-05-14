@@ -1,0 +1,33 @@
+{
+  "name": "fitlean-tracker-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FitLean Tracker / 减脂助手 微信小程序 MVP",
+  "scripts": {
+    "dev:weapp": "taro build --type weapp --watch",
+    "build:weapp": "taro build --type weapp"
+  },
+  "dependencies": {
+    "@babel/runtime": "latest",
+    "@tarojs/components": "latest",
+    "@tarojs/helper": "latest",
+    "@tarojs/plugin-framework-react": "latest",
+    "@tarojs/plugin-platform-weapp": "latest",
+    "@tarojs/react": "latest",
+    "@tarojs/runtime": "latest",
+    "@tarojs/shared": "latest",
+    "@tarojs/taro": "latest",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@tarojs/cli": "latest",
+    "@tarojs/webpack5-runner": "latest",
+    "@types/react": "^18.3.12",
+    "babel-preset-taro": "latest",
+    "typescript": "latest",
+    "webpack": "^5.91.0"
+  }
+}

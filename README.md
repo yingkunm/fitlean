@@ -69,6 +69,18 @@ npm run native:run:android
 
 iOS 需要本机安装 Xcode。Android 需要安装 Android Studio 和 Android SDK。每次修改 Web 代码后，先执行 `npm run native:sync`，再在 Xcode 或 Android Studio 中构建运行。
 
+## 微信小程序版本
+
+仓库内新增了 Taro 小程序版本：
+
+```bash
+cd miniprogram
+npm install
+npm run build:weapp
+```
+
+然后用微信开发者工具导入 `miniprogram/` 目录即可预览。小程序版同样只使用本地 storage，不接入云开发或后端服务。
+
 ## 主要计算公式
 
 - BMI = 体重 kg / 身高 m²
