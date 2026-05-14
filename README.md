@@ -1,6 +1,6 @@
 # FitLean Tracker / 减脂助手
 
-一个本地浏览器运行的减脂记录与推荐 MVP。项目使用 React + TypeScript + Vite 构建，数据只保存在浏览器 `localStorage`，不包含云端登录、后端服务或付费 API。
+一个可在浏览器运行、也可封装为 iOS/Android Native App 的减脂记录与推荐 MVP。项目使用 React + TypeScript + Vite + Capacitor 构建，数据只保存在本地 `localStorage`，不包含云端登录、后端服务或付费 API。
 
 ## 功能
 
@@ -38,6 +38,37 @@ npm run build
 
 当前 MVP 未配置单元测试脚本，因此没有 `npm test`。构建会执行 TypeScript 检查和 Vite 生产构建。
 
+## Native App 运行
+
+本项目已接入 Capacitor，包含 `ios/` 和 `android/` 原生工程。
+
+同步 Web 构建到原生工程：
+
+```bash
+npm run native:sync
+```
+
+打开 iOS 工程：
+
+```bash
+npm run native:open:ios
+```
+
+打开 Android 工程：
+
+```bash
+npm run native:open:android
+```
+
+直接运行到模拟器或真机：
+
+```bash
+npm run native:run:ios
+npm run native:run:android
+```
+
+iOS 需要本机安装 Xcode。Android 需要安装 Android Studio 和 Android SDK。每次修改 Web 代码后，先执行 `npm run native:sync`，再在 Xcode 或 Android Studio 中构建运行。
+
 ## 主要计算公式
 
 - BMI = 体重 kg / 身高 m²
@@ -58,7 +89,7 @@ npm run build
 
 ## 本地数据说明
 
-所有个人资料、饮食、运动和进度记录都保存在当前浏览器的 `localStorage` 中。换浏览器、清除站点数据或使用隐私模式可能导致数据不可见或丢失。建议需要备份时使用「导出 JSON」。
+所有个人资料、饮食、运动和进度记录都保存在当前浏览器或 Native WebView 的 `localStorage` 中。换浏览器、卸载 App、清除站点数据或使用隐私模式可能导致数据不可见或丢失。建议需要备份时使用「导出 JSON」。
 
 ## 健康免责声明
 
