@@ -60,6 +60,18 @@ npm run build
 
 所有个人资料、饮食、运动和进度记录都保存在当前浏览器的 `localStorage` 中。换浏览器、清除站点数据或使用隐私模式可能导致数据不可见或丢失。建议需要备份时使用「导出 JSON」。
 
+## 微信小程序版本
+
+小程序 MVP 位于 `miniprogram/`，使用 Taro + React + TypeScript。它复用了核心计算逻辑、内置食物库、运动 MET 表和食谱数据，数据保存在微信小程序本地存储中。
+
+```bash
+cd miniprogram
+npm install --legacy-peer-deps
+npm run build:weapp
+```
+
+然后用微信开发者工具打开 `miniprogram/` 目录，编译产物在 `miniprogram/dist`。
+
 ## 健康免责声明
 
 本应用提供的热量、运动消耗、食谱和运动建议均为估算，仅用于自我记录和一般健康管理，不构成医疗建议。孕期、哺乳期、未成年人、有慢性疾病、进食障碍史、严重肥胖或正在服药的人，请先咨询医生或注册营养师。
